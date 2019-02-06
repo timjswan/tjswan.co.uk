@@ -1,0 +1,201 @@
+* {
+	padding: 0;
+	margin: 0;
+	border: none;
+}
+
+body {
+	font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+	line-height: 1em;
+}
+.clear {
+	clear: both;
+	line-height: 0px;
+}
+
+.questionnaire {
+	width: 100%;
+	height: inherit;
+	position: absolute;
+	z-index: 1;
+	background: #CCCCCC;
+}
+
+#wrap {
+	width: 1024px;
+	margin: 0 auto;
+}
+
+#top {
+	background: url('../images/bannerFull.png') no-repeat top left;
+	height: 137px;
+}
+
+#top #nav {
+	position: relative;
+	float: right;
+	top: 95px;
+	right: 40px;
+}
+
+#top #nav ul{
+	list-style: none;
+}
+
+#top #nav ul li{
+	float: left;
+	margin: 0 0 0 5px;
+	border-right: solid 1px #fff;
+}
+
+#top #nav ul .last{
+	border-right: none;
+}
+
+#top #nav ul li .navlink {
+	padding: 7px 5px 7px 0;
+	color: #fff;
+	text-decoration: none;
+}
+
+#top #nav ul li .navlink:hover {
+	color: #2BA5B0;
+}
+
+#top #nav ul li .navlinkon {
+	color: #FC6D3D;
+}
+
+#mid {
+	background: url('../images/midBanner.png') no-repeat top left;
+	height: 37px;
+	margin-bottom: 0.5em;
+}
+
+#mid #contact {
+	position: relative;
+	left: 20px;
+	list-style: none;	
+}
+
+#mid #contact li {
+	position: relative;
+	float: left;
+	margin: 0 7px 0 0;
+}
+
+#mid #contact .mailbullet{
+	padding: 0 0 0 24px;
+	top: 7px;
+	height: 16px;
+	background: url('../images/mail.png') no-repeat 2px;
+}
+
+#mid #contact .phonebullet{
+	padding: 5px 0 0 18px;
+	top: 2px;
+	height: 24px;
+	background: url('../images/phone.png') no-repeat;
+}
+
+#mid #socialButtons .socialButton {
+	position: relative;
+	border:none; 
+	overflow:hidden; 
+	width:100px; 
+	height:21px;
+	float: right;
+	top: 4px;
+}
+
+#bookQ {
+	width: 259px;
+	display: none;
+	position: absolute;
+	border: #00AA00 solid 1px;
+	background: #CCFFCC;
+}
+
+#bookQ img {
+	float: right;
+}
+
+#bookQ p {
+	padding: 10px 0 5px 10px;
+	font-size: 90%;
+}
+
+#bookQ ul {
+	list-style-type: none;
+	padding:0 0 10px 0;
+}
+
+#bookQ ul li {
+	padding: 5px 10px 0;
+	font-size: 90%;
+}
+
+#mainContent {
+	clear: both;
+	padding: 0 10px 0 10px;
+	font-size: 95%;
+}
+
+#mainContent .headings {
+	margin-bottom: 0.5em;
+}
+
+#mainContent .fulltext {
+	padding-bottom: 1em;
+	line-height: 1.2em;
+}
+
+.emph{
+	font-weight: 600;
+}
+
+#mainContent .list {
+	padding-bottom: 1em;
+	line-height: 1.2em;
+	list-style-type: none;
+	text-indent: 1em;
+}
+
+#mainContent .listwithbullet {
+	padding: 0 0 1em 2em;
+	line-height: 1.2em;
+	list-style-type: disc;
+}
+
+#mainContent a {
+	color: #2BA5B0;
+}
+
+#mainContent a:hover {
+	color: #FC6D3D;
+	text-decoration: none;
+}
+
+#mainContent .contentImg {
+	border: 1px solid #000;
+	padding: 5px;
+	margin: 7px 7px 0 7px;
+	float: right;
+}
+
+#mainContent .sponsorLogo {
+	float: right;
+	margin: 7px 7px 0 7px;
+}
+
+#mainContent .tsp {
+	font-size: 80%;
+	border: #CC0000 solid 1px; 
+	background: #FFCCCC; 
+	padding: 5px 5px 0 5px;
+	margin-bottom: 1em;
+}
+
+#mainContent .tsp .fulltext {
+	padding-bottom: 0.8em;
+}

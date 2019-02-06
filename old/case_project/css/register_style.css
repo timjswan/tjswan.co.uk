@@ -1,0 +1,14 @@
+#regformwrap {
+float: left;
+width: 358px;
+}
+
+.inputdob {
+width: 2em;
+height: 17px;
+border: #000000 1px solid;
+}
+
+#year {
+width: 3em;
+}
