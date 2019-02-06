@@ -1,0 +1,33 @@
+#content, #header, #valid{
+margin: 0 auto;
+width: 1024px;
+}
+
+.indent {
+text-indent: 25px;
+padding: 10px;
+}
+
+.title {
+padding: 10px;
+}
+
+.float {
+float: right;
+padding: 10px;
+color: #0099FF;
+}
+
+.artheader {
+padding: 10px;
+padding-bottom: 0;
+}
+
+.date {
+padding: 10px;
+}
+
+.savecheck {
+display: none;
+margin: 3px;
+}

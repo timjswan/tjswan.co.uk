@@ -1,0 +1,121 @@
+/* classes for use across the board */
+
+.clear {
+	clear: both;
+	height: 0px;
+	line-height: 0px;
+}
+
+.tabDown {
+	padding: 0px 18px 0px 14px;
+	background: url('../images/tabDown.png') right 6px no-repeat;
+}
+
+.countryFlag {
+	width: 16px;
+	height: 11px;
+	position: relative;
+	background: url('../images/countries/sweden.png');
+}
+
+.divide {
+	height: 1px;
+	background: #273036;
+	border-bottom: 1px solid #47525a;
+}
+
+.greySeparator {
+	display: inline-block;
+	width: 2px;
+	height: 29px;
+	background: url('../images/greySeparatorBack.png') left top no-repeat;
+}
+
+.insetElementRound {
+	height: 30px;
+	background: #252e34;
+	border-radius: 15px;
+	-webkit-border-radius: 15px;
+	-moz-border-radius: 15px;
+}
+
+.insetElementRound.lightEmboss {
+	box-shadow: inset 5px 5px 10px 0 #1f272c, inset -5px -5px 10px 0 #1f272c /*inside shadow*/,
+				-1px 1px 0 0 #4a555e /*outside emboss*/;
+	-webkit-box-shadow: inset 5px 5px 10px 0 #1f272c, inset -5px -5px 10px 0 #1f272c /*inside shadow*/,
+				-1px 1px 0 0 #4a555e /*outside emboss*/;
+	-moz-box-shadow: inset 5px 5px 10px 0 #1f272c, inset -5px -5px 10px 0 #1f272c /*inside shadow*/,
+				-1px 1px 0 0 #4a555e /*outside emboss*/;
+}
+
+.insetElementRound.heavyEmboss {
+	box-shadow: inset 5px 5px 10px 0 #1f272c, inset -5px -5px 10px 0 #1f272c /*inside shadow*/,
+				-1px 1px 0 0 #6c7378 /*outside emboss*/;
+	-webkit-box-shadow: inset 5px 5px 10px 0 #1f272c, inset -5px -5px 10px 0 #1f272c /*inside shadow*/,
+				-1px 1px 0 0 #6c7378 /*outside emboss*/;
+	-moz-box-shadow: inset 5px 5px 10px 0 #1f272c, inset -5px -5px 10px 0 #1f272c /*inside shadow*/,
+				-1px 1px 0 0 #6c7378 /*outside emboss*/;
+}
+
+.searchInput {
+	background: #252e34 url('../images/searchGlass.png') 12px center no-repeat;
+	padding-left: 36px;
+}
+
+.checkOut {
+	background: #252e34 url('../images/cart.png') 10px center no-repeat;
+	padding-left: 34px;
+	line-height: 30px;
+}
+
+.subscribe {
+	line-height: 30px;
+}
+
+.subscribe input {
+	background: transparent;
+	padding-left: 18px;
+}
+
+.checkOut button,
+.subscribe button {
+	height: 22px;
+	line-height: 12px;
+	margin: 0px 4px 0px 12px;
+	padding: 0px 12px;
+	
+	/*button 3d effect styling */
+	background: #293339 url('../images/cartButtonGradient.png') top left repeat-x;
+	border: 1px solid #273138;	
+	border-radius: 10px;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	box-shadow: inset 0 1px 0 0 #3d4850, 0 1px 0 0 #232b30;
+	-webkit-box-shadow: inset 0 1px 0 0 #3d4850, 0 1px 0 0 #232b30;
+	-moz-box-shadow: inset 0 1px 0 0 #3d4850, 0 1px 0 0 #232b30;
+}
+
+.checkOut button:hover,
+.subscribe button:hover {
+	background: #404f5a url('../images/cartButtonGradientHover.png') repeat-x top left;
+	box-shadow: inset 0 1px 0 0 #4c5a64, 0 1px 0 0 #232b30;
+	-webkit-box-shadow: inset 0 1px 0 0 #4c5a64, 0 1px 0 0 #232b30;
+	-moz-box-shadow: inset 0 1px 0 0 #4c5a64, 0 1px 0 0 #232b30;
+}
+
+.subscribe .subscribeResult {
+	padding-top: 10px;
+	margin-left: 18px;
+}
+
+.subscribe .subscribeStatus {
+	display: none;
+	margin-bottom: 10px;
+	line-height: 16px;
+}
+
+.subscribe .subscribeStatus img {
+	margin-right: 8px;
+}
+
+/* end of reusable classes */
