@@ -1,0 +1,31 @@
+#newExample {
+	margin: 1em 2em 0;
+	padding: 1em;
+	border: solid 1px #000;
+	border-radius: 1em;
+	position: relative;
+	width: 50%;
+}
+
+#newExample input {
+	border: none;
+}
+
+#newExample input[type=text] {
+	margin-bottom: 0.25em;
+	display: block;
+	max-width: 150px;
+}
+
+#newExample input[type=textarea] {
+	position: absolute;
+	top: 1em;
+	right: 1em;
+	height: calc(100% - 2em);
+	width: 50%;
+	vertical-align: text-top;
+}
+
+#newExample .controls {
+	margin-top: 0.25em;
+}
