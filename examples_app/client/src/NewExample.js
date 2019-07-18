@@ -52,17 +52,21 @@ class NewExample extends Component {
 
 	render(){
 		return (
-			<form id="newExample" onSubmit={this.handleSubmit}>
-				<input onChange={this.handleChange} className="exampleEditData" type="text" placeholder="Title" name="title" />
-				<input onChange={this.handleChange} className="exampleEditData" type="text" placeholder="Image File Name" name="imageFileName" />
-				<input onChange={this.handleChange} className="exampleEditData" type="text" placeholder="URL" name="url" />
-				<input onChange={this.handleChange} className="exampleEditData" type="text" placeholder="Link Type" name="link" />
-				<input onChange={this.handleChange} className="exampleEditData" type="textarea" placeholder="Description" name="description" />
-				<div className="controls">
-					<button type="reset">clear</button>
-					<button type="submit">save</button>
-				</div>
-			</form>
+			<React.Fragment>
+				{this.props.isAuthenticated && (
+				<form id="newExample" onSubmit={this.handleSubmit}>
+					<input onChange={this.handleChange} className="exampleEditData" type="text" placeholder="Title" name="title" />
+					<input onChange={this.handleChange} className="exampleEditData" type="text" placeholder="Image File Name" name="imageFileName" />
+					<input onChange={this.handleChange} className="exampleEditData" type="text" placeholder="URL" name="url" />
+					<input onChange={this.handleChange} className="exampleEditData" type="text" placeholder="Link Type" name="link" />
+					<input onChange={this.handleChange} className="exampleEditData" type="textarea" placeholder="Description" name="description" />
+					<div className="controls">
+						<button type="reset">clear</button>
+						<button type="submit">save</button>
+					</div>
+				</form>
+				)}
+			</React.Fragment>
 		)
 	}
 }

@@ -13,8 +13,7 @@ function UnEditable(props) {
 		<li><span className="exampleData">{example.description}</span></li>
 		</React.Fragment>
 	);
-}
-//
+}//
 
 function Editable(props) {
 	const example = props.example;
@@ -126,11 +125,13 @@ class Example extends Component {
 		return (
 			<li>			
 				<ul className="example">
-					<li className="controls">
-						<button onClick={() => this.deleteFromDB(example._id)}>delete</button>
-						<button ref="edit" className="offEdit" onClick={() => this.setEdit(true)}>edit</button>
-						<button ref="save" className="onEdit" onClick={() => this.workOutWhatsChanged(example._id)}>save</button>
-					</li>
+					{this.props.isAuthenticated && (
+						<li className="controls">
+							<button onClick={() => this.deleteFromDB(example._id)}>delete</button>
+							<button ref="edit" className="offEdit" onClick={() => this.setEdit(true)}>edit</button>
+							<button ref="save" className="onEdit" onClick={() => this.workOutWhatsChanged(example._id)}>save</button>
+						</li>
+					)}
 					{exampleHtml}
 				</ul>
 			</li>

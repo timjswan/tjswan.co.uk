@@ -1,3 +1,8 @@
 naplearn/*
 trialsite/*
 .htaccess
+node_modules/
+npm-debug.log
+package-lock.json
+package.json
+webtest/

@@ -64,9 +64,6 @@ router.post("/updateData", (req, res) => {
 // this method removes existing data in our database
 router.delete("/deleteData", (req, res) => {
   const { id } = req.body;
-
-  //console.log("Deleting id: " + id);
-
   const objIdToDelete = new mongoose.Types.ObjectId(id);
   
   Examples.deleteOne({_id:objIdToDelete} , err => {
@@ -82,12 +79,6 @@ router.post("/putData", (req, res) => {
 
   const requestData = req.body;
 
-  /*if ((!id && id !== 0) || !message) {
-    return res.json({
-      success: false,
-      error: "INVALID INPUTS"
-    });
-  }*/
   example.numericalIndex = requestData.numericalIndex;
   example.title = requestData.title;
   example.imageFileName = requestData.imageFileName;

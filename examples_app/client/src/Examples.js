@@ -62,7 +62,6 @@ class Examples extends Component {
 
 	render(){
 		const { examples } = this.state;
-		//const currentIds = examples.numericalIndex;
 		return (
 			<ul id="examples" key="1">
 				{examples.length <= 0
