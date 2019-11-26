@@ -4,14 +4,15 @@ import "./examples.css";
 
 function UnEditable(props) {
 	const example = props.example;
+	const imgSrc = 'img/' + example.imageFileName;
+	const exampleStyle = {
+		backgroundImage: 'url(' + imgSrc + ')'
+	};
+
 	return (
-		<React.Fragment>
-		<li><span className="exampleData">{example.title}</span></li>
-		<li><span className="exampleData">{example.imageFileName}</span></li>
-		<li><span className="exampleData">{example.url}</span></li>
-		<li><span className="exampleData">{example.link}</span></li>
-		<li><span className="exampleData">{example.description}</span></li>
-		</React.Fragment>
+		<div className="example shadow" style={exampleStyle}>
+			<div className="exampleCaption"><a href="{example.url}">{example.title}</a> - {example.description}{example.link}</div>
+		</div>
 	);
 }//
 
@@ -19,11 +20,11 @@ function Editable(props) {
 	const example = props.example;
 	return (
 		<React.Fragment>
-		<li><input onChange={props.handler} type="text" name="title" defaultValue={example.title} className="exampleDataEdit" /></li>
-		<li><input onChange={props.handler} type="text" name="imageFileName" defaultValue={example.imageFileName} className="exampleDataEdit" /></li>
-		<li><input onChange={props.handler} type="text" name="url" defaultValue={example.url} className="exampleDataEdit" /></li>
-		<li><input onChange={props.handler} type="text" name="link" defaultValue={example.link} className="exampleDataEdit" /></li>
-		<li><input onChange={props.handler} type="textarea" name="description" defaultValue={example.description} className="exampleDataEdit" /></li>
+		<input onChange={props.handler} type="text" name="title" defaultValue={example.title} className="exampleDataEdit" />
+		<input onChange={props.handler} type="text" name="imageFileName" defaultValue={example.imageFileName} className="exampleDataEdit" />
+		<input onChange={props.handler} type="text" name="url" defaultValue={example.url} className="exampleDataEdit" />
+		<input onChange={props.handler} type="text" name="link" defaultValue={example.link} className="exampleDataEdit" />
+		<input onChange={props.handler} type="textarea" name="description" defaultValue={example.description} className="exampleDataEdit" />
 		</React.Fragment>
 	);
 }
@@ -81,7 +82,7 @@ class Example extends Component {
 		let updateData = {};		
 
 		if(this.state.edit){
-			Object.keys(this.state).map(i => {
+			Object.keys(this.state).forEach(i => {
 				var stateItem = this.state[i];
 				if(stateItem !== "" && typeof stateItem !== "boolean"){
 					updateData[i] = stateItem;
@@ -122,19 +123,15 @@ class Example extends Component {
 			exampleHtml = <UnEditable handler={this.handleChange} example={example} />;
 		}
 
-		return (
-			<li>			
-				<ul className="example">
-					{this.props.isAuthenticated && (
-						<li className="controls">
-							<button onClick={() => this.deleteFromDB(example._id)}>delete</button>
-							<button ref="edit" className="offEdit" onClick={() => this.setEdit(true)}>edit</button>
-							<button ref="save" className="onEdit" onClick={() => this.workOutWhatsChanged(example._id)}>save</button>
-						</li>
-					)}
-					{exampleHtml}
-				</ul>
-			</li>
+		return (			
+			<div className="example-slide fade">
+				<div className="controls">
+					<button onClick={() => this.deleteFromDB(example._id)}>delete</button>
+					<button ref="edit" className="offEdit" onClick={() => this.setEdit(true)}>edit</button>
+					<button ref="save" className="onEdit" onClick={() => this.workOutWhatsChanged(example._id)}>save</button>
+				</div>
+				{exampleHtml}
+			</div>
 		);
 	}
 }

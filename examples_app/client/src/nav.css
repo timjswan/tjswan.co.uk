@@ -1,0 +1,68 @@
+nav {
+	height: 92px;
+	line-height: 92px;
+}
+
+nav #nav-menu {
+	float: right;
+	position: relative;
+	z-index: 99;
+}
+
+nav #nav-menu .link {
+	text-transform: uppercase;
+	font-style: italic;
+	text-decoration: none;
+	margin-right: 1em;
+	color: #FFF;
+}
+
+nav #nav-menu .link:visited {
+	color: #FFF;
+}
+
+nav #nav-menu #nav-social-menu {
+	background: #0d72b8;
+	border-bottom-left-radius: 35px;
+	border-bottom-right-radius: 35px;
+	float: right;
+	text-align: center;
+	padding: 0 0.5em;
+	max-height: 0;
+	transition: max-height .5s;
+}
+
+nav #nav-menu #nav-social-menu.active {
+	max-height: 450px;
+}
+
+nav #nav-menu #nav-social-menu .nav-social-menu-toggle {
+	background: transparent;
+	border: none;
+}
+
+nav #nav-menu #nav-social-menu .nav-social-menu-toggle img {
+	transition: transform .5s;
+}
+
+nav #nav-menu #nav-social-menu.active .nav-social-menu-toggle img {
+	transform: rotate(180deg);
+}
+
+nav #nav-menu .social {
+	list-style-type: none;
+	line-height: 100%;
+	padding: 0;
+}
+
+nav #nav-menu .social .social-item {
+	margin-bottom: 0.5em;
+	visibility: hidden;
+	opacity: 0;
+	transition: visibility 0s, opacity .5s;
+}
+
+nav #nav-menu #nav-social-menu.active .social .social-item {
+	visibility: visible;
+	opacity: 1;
+}

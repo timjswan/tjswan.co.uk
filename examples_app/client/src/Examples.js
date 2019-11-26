@@ -8,7 +8,8 @@ class Examples extends Component {
 
 		this.state = {
 			examples: [],
-			intervalIsSet: false
+			intervalIsSet: false,
+			slide: 1
 		};
 	}
 
@@ -48,7 +49,7 @@ class Examples extends Component {
 			if(!data.ok){
 				return data.text().then(result => Promise.reject(new Error(result)));
 			}
-			//console.log(data);
+			//console.log(JSON.stringify(data.json()));
 			return data.json();
 		})
 		.then((res) => {
@@ -60,16 +61,43 @@ class Examples extends Component {
 		});
 	};
 
+	setActiveSlide = (n, slides) => {
+		for(let slide of slides){
+			slide.style.display = 'none';
+		}
+		slides[n].style.display = 'block';
+	};
+
+	slide = (n) => {
+		const slides = document.getElementsByClassName("example-slide");
+		const slideAmount = slides.length;
+	
+		this.setState(() => {
+			const { slide } = this.state;
+			if(n > slideAmount)
+				return {slide: 1};
+
+			else if(n < 1)
+				return {slide: slideAmount};
+
+			else
+				return {slide: n}
+		});
+		this.setActiveSlide(this.state.slide - 1, slides);
+	};
+
 	render(){
 		const { examples } = this.state;
 		return (
-			<ul id="examples" key="1">
+			<div className="examples-container">
 				{examples.length <= 0
 				? "No data"
 				: examples.map(example => (
 					<Example key={example.numericalIndex} exampleData={example} />
 				))}
-			</ul>
+				<button onClick={() => this.slide(this.state.slide - 1)} className="example-control example-prev"><img src='img/carouselprev.png' alt="" /></button>
+				<button onClick={() => this.slide(this.state.slide + 1)} className="example-control example-next"><img src='img/carouselnext.png' alt="" /></button>
+			</div>
 		);
 	}
 }

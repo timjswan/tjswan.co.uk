@@ -1,66 +1,78 @@
-* {
-	padding: 0;
-	margin: 0;
+#examples {
+    height: calc(100vh - 140px);
 }
 
-#examples,
-#examples .example {
-	list-style: none;
-	padding: 2em 2em 0;
+#examples .examples-container {
+  	position: relative;
+  	margin: auto;
 }
 
-#examples li {
-	margin-top: 1em
-}
-
-#examples li:first-child {
-	margin: 0;
-}
-
-#examples .example {
-	margin: 0;
-	padding: 0;
-}
-
-#examples .example li {
-	border-left: 1px solid #000;
-	padding: 0px 1em;
-	display: inline;
-}
-
-#examples .example .controls {
-	padding-left: 0px !important;
-}
-
-.controls button {
-	border: 0;
-	border-radius: 0.25em;
-	background: darkgreen;
-	color: #FFF;
-	padding: 0.25em;
-}
-
-.controls button:first-child {
-	margin-right: 0.25em;
-}
-
-.controls .onEdit {
+#examples .example-slide .controls {
 	display: none;
 }
 
-.constrols .offEdit {
-	display: inline;
+#examples .example {
+	width: 820px;
+	height: 510px;
+	position: relative;
+	margin: 0 auto;
 }
 
-#examples .example li:nth-child(2) {
-	padding-left: 0;
+#examples .example .exampleCaption {
+	background: rgba(0, 0, 0, 0.5);
+	padding: 1em;
+	margin: 2em;
+	position: absolute;
+	bottom: 2em;
 }
 
-#examples .example li:first-child,
-#examples .example li:nth-child(2) {
-	border: none;
+#examples .example-slide {
+  	display: none;
 }
 
-#examples .example.edit .exampleEditData {
-	border: none;
+#examples .example-slide:first-child {
+	display: block;
+}
+
+#examples .example-control {
+	background: transparent;
+  	cursor: pointer;
+  	position: absolute;
+  	top: calc(50% - 45px);
+  	width: auto;
+  	border: none;
+  	transition: transform .5s;
+}
+
+#examples .example-next:hover {
+	transform: translateX(5px);
+}
+
+#examples .example-prev:hover {
+	transform: translateX(-5px);
+}
+
+#examples .example-prev {
+	left: 0;
+}
+
+#examples .example-next {
+	right: 0;
+}
+
+#examples .fade {
+  	-webkit-animation-name: fade;
+  	-webkit-animation-duration: 1.5s;
+  	animation-name: fade;
+  	animation-duration: 1.5s;
+}
+
+@-webkit-keyframes #examples fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+@keyframes #examples fade {
+  from {opacity: .4}
+  to {opacity: 1}
 }

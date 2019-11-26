@@ -1,0 +1,130 @@
+html {
+	background: #21b4e8;
+}
+
+body {
+	max-width: 1200px;
+	margin: 0 auto;
+	font-family: 'Lato', sans-serif;
+	color: #FFF;
+	font-size: 24px;
+	overflow-x: hidden;
+}
+
+.shadow {
+	box-shadow: 0.125em 0.125em 0.125em #000;
+}
+
+.logo {
+	font-size: 70px;
+	font-style: italic;
+	display: inline-block;
+	position: relative;
+	left: 115px;
+	margin: 0;
+}
+
+nav {
+	height: 92px;
+	line-height: 92px;
+	margin-bottom: 48px;
+}
+
+nav #nav-menu {
+	position: absolute;
+	right: 0px;
+}
+
+nav #nav-menu .link {
+	text-transform: uppercase;
+	font-style: italic;
+	text-decoration: none;
+	margin-right: 1em;
+	color: #FFF;
+}
+
+nav #nav-menu .link:visited {
+	color: #FFF;
+}
+
+#about, #contact {
+	width: 915px;
+	position: relative;
+	margin: 0 auto;
+}
+
+section h2 {
+	text-align: center;
+}
+
+#contact {
+	clear: both;
+}
+
+#about img {
+	float: left;
+}
+
+#about p {
+	width: 505px;
+	display: inline-block;
+	margin-left: 3em;
+}
+
+#contact form label {
+	float: left;
+	min-width: 4.5em;
+	line-height: 50px;
+}
+
+#contact form input {
+	border: none;
+	line-height: 50px;
+	padding-left: 1em;
+	margin-bottom: 1em;
+	display: block;
+	min-width: 220px;
+}
+
+#contact form input[type="textarea"] {
+	height: 135px;
+}
+
+footer {
+	background: #000;
+	text-align: center;
+	vertical-align: middle;
+	position: relative;
+	padding: 0.5em;
+}
+
+footer:before, footer:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 9600px;
+  right: 100%;
+  background: #000;
+}
+
+footer:after { 
+  width: 320px;
+  left: 100%;
+  background: #000;
+}
+
+footer p {
+	display: inline;
+	margin: 0;
+	line-height: 48px;
+}
+
+footer .social {
+	display: inline;
+	margin: 0;
+}
+
+footer .social .social-item {
+	display: inline;
+}
